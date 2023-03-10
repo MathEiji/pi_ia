@@ -2,6 +2,53 @@ import numpy as np
 from movimento import Movimento
 
 class Utils:
+
+    def subir_vertical(movimento: Movimento, iterator: int):
+        var_x = movimento.linha - iterator
+        var_y = movimento.coluna
+        return var_x, var_y
+    
+    def descer_vertical(movimento: Movimento, iterator: int):
+        var_x = movimento.linha + iterator
+        var_y = movimento.coluna
+        return var_x, var_y
+    
+    def direita_horizontal(movimento: Movimento, iterator: int):
+        var_x = movimento.linha
+        var_y = movimento.coluna + iterator
+        return var_x, var_y
+
+    def esquerda_horizontal(movimento: Movimento, iterator: int):
+        var_x = movimento.linha
+        var_y = movimento.coluna - iterator
+        return var_x, var_y
+
+    def subir_diagonald(movimento: Movimento, iterator: int):
+        var_x = movimento.linha - iterator
+        var_y = movimento.coluna + iterator
+        return var_x, var_y
+    
+    def descer_diagonald(movimento: Movimento, iterator: int):
+        var_x = movimento.linha + iterator
+        var_y = movimento.coluna + iterator
+        return var_x, var_y
+    
+    def subir_diagonale(movimento: Movimento, iterator: int):
+        var_x = movimento.linha - iterator
+        var_y = movimento.coluna - iterator
+        return var_x, var_y
+    
+    def descer_diagonale(movimento: Movimento, iterator: int):
+        var_x = movimento.linha + iterator
+        var_y = movimento.coluna - iterator
+        return var_x, var_y
+    
+    def cor_oposta(movimento: Movimento):
+        if movimento.cor == 'P':
+            return 'B'
+        else:
+            return 'P'
+
     def gera_possibilidades_horizontal(movimento: Movimento):
         consec_d = ''
         consec_e = ''

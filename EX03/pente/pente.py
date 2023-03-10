@@ -186,13 +186,40 @@ class Pente:
       return 1
     return 0
 
+  def captura_vertical(self, movimento: Movimento):
+      v = np.empty([])
+      cor_oposta = Utils.cor_oposta(movimento)
+      tmp = 1
+      x_sup, y_sup = Utils.subir_vertical(movimento, tmp)
+      x_inf, y_inf = Utils.descer_vertical(movimento, tmp)
+      if self.tabuleiro[x_sup][y_sup] == cor_oposta and self.tabuleiro[movimento.linha][movimento.coluna] == movimento.cor:
+        x_sup1, y_sup1 = Utils.subir_vertical(movimento, (tmp + 1))
+        if self.tabuleiro[x_sup1][y_sup1] == cor_oposta: #and self.tabuleiro[x_sup][y_sup] == cor_oposta:
+          x_sup2, y_sup2 = Utils.subir_vertical(movimento, (tmp + 2))
+          x_sup3, y_sup3 = Utils.subir_vertical(movimento, (tmp + 3))
+          if self.tabuleiro[x_sup2][y_sup2] == movimento.cor and  (self.tabuleiro[x_sup3][y_sup3] == '-' or self.tabuleiro[x_sup3][y_sup3] == movimento.cor):
+            v1 = np.array([[x_sup, y_sup]])
+            v2 = np.array([[x_sup1, y_sup1]])
+            v = np.insert( v, 1, v1, axis=0)
+            v = np.insert( v, 1, v2, axis=0)
+  
+      if self.tabuleiro[linha_d][movimento.coluna] == movimento.cor and self.tabuleiro[anterior_d][movimento.coluna] == movimento.cor:
+        pecas = pecas + 1
+      
+      return v
 
   def validar_captura(self, movimento): #Criar funcao que valida se houve pecas capturadas
+    v, h, de, dd = 0
+    for i in range(4):
+      # vertical
+      tmp = i + 1
+      tmp_v = Utils.subir_vertical(movimento, tmp)
+      # if self.tabuleiro[][]
+      
     return 1
 
 
   def validar_jogada(self, movimento: Movimento):
-
     #Valida se a posicao existe no tabuleiro
     if movimento.linha > len(self.tabuleiro[0])-1 or movimento.coluna > len(self.tabuleiro[0])-1:
       return 0
