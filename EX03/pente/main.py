@@ -34,3 +34,6 @@ if __name__ == "__main__":
     jogo.colocar_peca(Movimento(8,8,'P'))
     jogo.colocar_peca(Movimento(11,11,'B'))
     jogo.colocar_peca(Movimento(7,7,'B'))
+    jogo.colocar_peca(Movimento(13,13,'P'))
+    jogo.colocar_peca(Movimento(14,14,'P'))
+    jogo.colocar_peca(Movimento(15,15,'B'))

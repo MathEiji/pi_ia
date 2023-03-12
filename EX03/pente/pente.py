@@ -318,7 +318,6 @@ class Pente:
     h = self.captura_horizontal(movimento)
     dd = self.captura_diagonald(movimento)
     de = self.captura_diagonale(movimento)
-    print(de)
 
     self.capturar_peca(movimento, v)
     self.capturar_peca(movimento, h)
