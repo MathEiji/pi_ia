@@ -13,7 +13,6 @@ class Pente:
     self.encerrado = 0
     for i in range(18):
       self.tabuleiro = np.insert( self.tabuleiro, 1, self.positions, axis=0)
-    print(self.tabuleiro.shape)
 
 
   def print_tabuleiro(self, tabuleiro):
@@ -27,6 +26,16 @@ class Pente:
           status = status + tmp + " "
     print(status)
   
+  def validar_jogada(self, movimento: Movimento):
+    #Valida se a posicao existe no tabuleiro
+    if movimento.linha > len(self.tabuleiro[0])-1 or movimento.coluna > len(self.tabuleiro[0])-1 or self.encerrado == 1:
+      return 0
+    else:
+      # Valida se existe alguma peca na posicao
+      if self.tabuleiro[movimento.linha][movimento.coluna] != '-':
+        return 0
+      else:
+        return 1
 
   def colocar_peca(self, movimento: Movimento):
     if self.validar_jogada(movimento):
@@ -252,7 +261,6 @@ class Pente:
     tmp = 1
     x_sup, y_sup = u.subir_diagonald(movimento, tmp)
     x_inf, y_inf = u.descer_diagonald(movimento, tmp)
-    print(x_inf, y_inf)
     if self.tabuleiro[x_sup][y_sup] == cor_oposta and self.tabuleiro[movimento.linha][movimento.coluna] == movimento.cor:
       x_sup1, y_sup1 = u.subir_diagonald(movimento, (tmp + 1))
       if self.tabuleiro[x_sup1][y_sup1] == cor_oposta:
@@ -304,7 +312,6 @@ class Pente:
       for i in range(len(vetor)):
         x = vetor[i][0]
         y = vetor[i][1]
-        print(x, y)
         self.tabuleiro[x][y] = '-'
       
       if movimento.cor == 'B':
@@ -326,16 +333,4 @@ class Pente:
     
     print("Pretos capturados: ", self.pretos_capturados)
     print("Brancos capturados: ", self.brancos_capturados)
-      
-
-  def validar_jogada(self, movimento: Movimento):
-    #Valida se a posicao existe no tabuleiro
-    if movimento.linha > len(self.tabuleiro[0])-1 or movimento.coluna > len(self.tabuleiro[0])-1 or self.encerrado == 1:
-      return 0
-    else:
-      # Valida se existe alguma peca na posicao
-      if self.tabuleiro[movimento.linha][movimento.coluna] != '-':
-        return 0
-      else:
-        return 1
   
