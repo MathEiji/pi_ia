@@ -8,6 +8,8 @@ if __name__ == "__main__":
 
     print("Inserir a jogada no seguinte formato: linha,coluna")
     while (jogo.encerrado == 0):
+        if (jogo.encerrado == 1):
+            break
         v_p = input ("Jogada P :")
         jogo.colocar_peca(Movimento(int(v_p.split(',')[0]), int(v_p.split(',')[1]), 'P'))
         v_b = input ("Jogada B :")
