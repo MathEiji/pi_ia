@@ -30,7 +30,7 @@ class Utils:
     
     def descer_diagonald(movimento: Movimento, iterator: int):
         var_x = movimento.linha + iterator
-        var_y = movimento.coluna + iterator
+        var_y = movimento.coluna - iterator
         return var_x, var_y
     
     def subir_diagonale(movimento: Movimento, iterator: int):
@@ -40,7 +40,7 @@ class Utils:
     
     def descer_diagonale(movimento: Movimento, iterator: int):
         var_x = movimento.linha + iterator
-        var_y = movimento.coluna - iterator
+        var_y = movimento.coluna + iterator
         return var_x, var_y
     
     def cor_oposta(movimento: Movimento):
@@ -48,6 +48,12 @@ class Utils:
             return 'B'
         else:
             return 'P'
+    
+    def validar_limite(i: int):
+        if (i < 19 and i >= 0):
+            return 1
+        else:
+            return 0
 
     def gera_possibilidades_horizontal(movimento: Movimento):
         consec_d = ''
