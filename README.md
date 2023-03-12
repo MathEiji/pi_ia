@@ -5,3 +5,4 @@
 
 ## EX03:
 - Jogo em python
+Para executá-lo: python ./EX03/pente/main.py
