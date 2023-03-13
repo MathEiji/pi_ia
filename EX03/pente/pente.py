@@ -203,6 +203,12 @@ class Pente:
       return 1
     return 0
 
+  def status_encerrado(self):
+    if self.encerrado == 1:
+      return 1
+    else:
+      return 0
+
   def captura_vertical(self, movimento: Movimento):
       v = np.empty((0,2), int)
       cor_oposta = u.cor_oposta(movimento)
