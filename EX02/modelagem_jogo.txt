@@ -25,3 +25,19 @@ Jogo: Pente
 - O que é o estado inicial? E o estado final?
 - Como são as jogadas? Faça um grafo simples com estados e arestas
 - Como se calcula a função de utilidade do game?
+
+3) Heuristica inicial
+- Regras iniciais
+    -> A primeira jogada das brancas tem que ser no centro do tabuleiro - a intersecção K10.
+    -> A segunda jogada das brancas deve ser feita a pelo menos três intersecções de distância do centro K10 em qualquer direcção.
+- Colocar pecas consecutivamente numa linha vertical, horizontal ou diagonal
+
+4) Heuristica final/meio de jogo
+- Capturar pecas
+- Colocar pecas consecutivamente numa linha vertical, horizontal ou diagonal
+
+5) Funcao de utilidade
+peso_captura = 1
+peso_consec = 1
+f(cor) = se numero de pecas capturadas(cor oponente) >= 5 -> peso_captura *100
+f(cor) = se numero de pecas consecutivas(cor jogador) >= 3 -> peso_consec *10
