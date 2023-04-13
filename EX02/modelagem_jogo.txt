@@ -37,7 +37,8 @@ Jogo: Pente
 - Colocar pecas consecutivamente numa linha vertical, horizontal ou diagonal
 
 5) Funcao de utilidade
-peso_captura = 1
-peso_consec = 1
-f(cor) = se numero de pecas capturadas(cor oponente) >= 5 -> peso_captura *100
+peso_captura = 1 * n_peca_para_capturar
+peso_consec = 1 * n_pecas_consecutivas
+
+f(cor) = se numero de pecas capturadas(cor oponente) >= 5 -> peso_captura *10
 f(cor) = se numero de pecas consecutivas(cor jogador) >= 3 -> peso_consec *10
