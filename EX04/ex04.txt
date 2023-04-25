@@ -1,0 +1,16 @@
+1) Heuristica inicial
+- Regras iniciais
+    -> A primeira jogada das brancas tem que ser no centro do tabuleiro - a intersecção K10.
+    -> A segunda jogada das brancas deve ser feita a pelo menos três intersecções de distância do centro K10 em qualquer direcção.
+- Colocar pecas consecutivamente numa linha vertical, horizontal ou diagonal
+
+2) Heuristica final/meio de jogo
+- Capturar pecas
+- Colocar pecas consecutivamente numa linha vertical, horizontal ou diagonal
+
+3) Funcao de utilidade
+peso_captura = 1 * n_peca_para_capturar
+peso_consec = 1 * n_pecas_consecutivas
+
+f(cor) = se numero de pecas capturadas(cor oponente) >= 5 -> peso_captura *10
+f(cor) = se numero de pecas consecutivas(cor jogador) >= 3 -> peso_consec *10
