@@ -28,12 +28,11 @@ async def on_message(message):
         return
  
     if message.content.startswith('oi'):
-        await message.channel.send('UGA BUGA!')
+        await message.channel.send('Send it!')
  
-    if message.content.startswith('macaco'):
-        await message.channel.send(file=discord.File('download.png'))
+    if message.content.startswith('drift'):
+        await message.channel.send('Get sideways')
+        await message.channel.send(file=discord.File('sideways.jpg'))
  
-    if message.content.startswith('grita'):
-        await message.channel.send(file=discord.File('masqueico.mp3'))
- 
-client.run('MTEwMDU0NDIyOTg5NTMyNzkwNA.G3Rcct.73wB5ZJYfgJ7YtrFtAsxqxYQ97BLAvUDPvrDyE')
+
+client.run('secret_key')
