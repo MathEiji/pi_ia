@@ -69,4 +69,4 @@ async def on_message(message):
             await message.channel.send(file=discord.File('sideways.jpg'))
  
 
-client.run('MTEwMDU0NDIyOTg5NTMyNzkwNA.G181qk.d-PNM5_4uDrbvdNAdQxQGz9XiAgxK2-gJmaet8')
+client.run('MTEwMDU0NDIyOTg5NTMyNzkwNA.GCwy-u.y-41k1N9eJXnvEdCAgz1JiwzeQv8M1yNzcV1YE')
