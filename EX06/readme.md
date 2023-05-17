@@ -2,10 +2,10 @@
 ## Descricao
 Busca detectar a emocao da pessoa na foto.
 As emocoes detectadas sao:
- - Angry
- - Happy
- - Sad
- - Surprise
+ - Nervoso
+ - Feliz
+ - Triste
+ - Surpreso
 
 ## Dataset utilizado
  - https://www.kaggle.com/competitions/challenges-in-representation-learning-facial-expression-recognition-challenge/data
