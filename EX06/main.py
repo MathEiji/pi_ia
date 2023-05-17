@@ -7,7 +7,7 @@ import imageio.v3 as iio
 class_names = ["Angry", "Happy", "Sad", "Surprise"]
 
 def detect_emotion(frame):
-    model = tf.keras.models.load_model("model_v2.h5")
+    model = tf.keras.models.load_model("model.h5")
     emotion = list(model.predict(tf.expand_dims(frame, axis=0)))
     num = max(emotion[0])
     idx = list(emotion[0]).index(num)
@@ -69,4 +69,4 @@ async def on_message(message):
             await message.channel.send(file=discord.File('sideways.jpg'))
  
 
-client.run('secret_key')
+client.run('MTEwMDU0NDIyOTg5NTMyNzkwNA.G181qk.d-PNM5_4uDrbvdNAdQxQGz9XiAgxK2-gJmaet8')
