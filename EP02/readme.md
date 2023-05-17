@@ -9,6 +9,7 @@ As emocoes detectadas sao:
 
 ## Dataset utilizado
  - https://www.kaggle.com/competitions/challenges-in-representation-learning-facial-expression-recognition-challenge/data
+ - Treinamento esta dentro do diretorio jupyter
 
 ## Funcionamento
  - Instalar a dependencias necessarias, elas sao:
