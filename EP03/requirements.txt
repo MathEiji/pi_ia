@@ -1,0 +1,7 @@
+gymnasium
+gymnasium[atari]
+gymnasium[accept-rom-license]
+colorama
+tensorflow==2.12.0
+gym==0.21.0
+keras-rl2=1.0.5
