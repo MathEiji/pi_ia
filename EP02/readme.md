@@ -19,4 +19,4 @@ As emocoes detectadas sao:
    - cv2
    - imageio
  - Executar o main.py
- - Enviar uma imagem de uma pessoa em um dos canais do discord
+ - Enviar uma imagem de uma pessoa em um dos canais do discord, e o bot irá assumir a emoção da pessoa na imagem.
